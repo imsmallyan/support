@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Buy me a coffee</title>
-<meta name="description" content="I make free, open-source tools in my spare time. If one of them helped you, you can buy me a coffee on Ko-fi.">
+<meta name="description" content="Things I make in my spare time, from small PC tools to game servers. If one of them helped you, you can buy me a coffee on Ko-fi.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
   :root {
@@ -69,7 +69,11 @@
     border-radius: 8px; color: inherit; text-decoration: none;
   }
   a.project:hover { background: var(--subtle); }
-  .project img { width: 48px; height: 48px; flex: none; border-radius: 10px; }
+  .project img, .project .tile { width: 48px; height: 48px; flex: none; border-radius: 10px; }
+  .project .tile {
+    display: grid; place-items: center; font-style: normal; font-size: 22px; font-weight: 600;
+    background: var(--primary-light); color: var(--primary);
+  }
   .project b { display: block; font-weight: 600; }
   .project span { display: block; color: var(--sub); font-size: 14px; }
 
@@ -94,10 +98,10 @@
 <body>
   <div class="top">
     <div class="lang" role="group" aria-label="Language">
+      <button data-lang="en">English</button>
       <button data-lang="zh-CN">简体</button>
       <button data-lang="zh-TW">繁體</button>
       <button data-lang="ja">日本語</button>
-      <button data-lang="en">English</button>
     </div>
   </div>
 
@@ -164,7 +168,18 @@
           "zh-CN": "不联网、不常驻、不带广告的 Windows 优化工具，删除前都先列出明细。",
           "zh-TW": "不連網、不常駐、不帶廣告的 Windows 最佳化工具，刪除前都先列出明細。",
           ja: "ネット接続なし、常駐なし、広告なしの Windows 最適化ツール。削除の前に必ず明細を表示します。",
-          en: "A Windows optimizer with no network access, nothing left running, and no ads. Every deletion is listed before it happens."
+          en: "A Windows optimizer with no network access, no background processes, and no ads. It shows you exactly what will be deleted before removing anything."
+        }
+      },
+      {
+        logo: "projects/simplemock.png",
+        url: "https://chromewebstore.google.com/detail/simplemock/hlpkeccbpljjmjaebmdiebianapmopom",
+        name: { en: "SimpleMock" },
+        desc: {
+          "zh-CN": "在本地模拟接口的 Chrome 扩展。开发和测试网页时，可以给 Fetch / XHR 请求返回自定义的响应。",
+          "zh-TW": "在本機模擬 API 的 Chrome 擴充功能。開發和測試網頁時，可以為 Fetch / XHR 請求回傳自訂的回應。",
+          ja: "ローカルで API をモックできる Chrome 拡張機能。Web アプリの開発やテストで、Fetch / XHR リクエストに任意のレスポンスを返せます。",
+          en: "A Chrome extension for local API mocking. Return custom responses for Fetch and XHR requests while you build and test web apps."
         }
       }
     ]
@@ -175,66 +190,66 @@
     "zh-CN": {
       title: "请我喝杯咖啡",
       heading: "请我喝杯咖啡",
-      intro: "我利用业余时间做一些免费、开源的小工具，不放广告、不做会员、不收集任何数据，以后也会一直免费。如果其中某个作品帮到了你，欢迎请我喝杯咖啡，这会让我更有动力继续做下去。",
+      intro: "我利用业余时间做一些自己喜欢的东西，有电脑小工具，也有游戏服务器。如果其中某个作品帮到了你，或者让你玩得开心，欢迎请我喝杯咖啡，这会让我更有动力继续做下去。",
       button: "在 Ko-fi 请我喝杯咖啡",
       note: "通过 Ko-fi 安全付款，金额随意，不需要注册账号。",
       projectsTitle: "我的作品",
       whyTitle: "你的支持会用在哪里",
-      p1: "维护现有作品：跟进系统和环境的变化，修复问题，保证安全可靠。",
-      p2: "做新的作品：把大家真正需要的东西做出来。",
-      p3: "坚持原则：所有作品都免费，不加广告，不收集数据。",
+      p1: "维持运行：修复问题、更新维护，以及支付服务器等日常开销。",
+      p2: "做新的作品：把大家真正需要、真正喜欢的东西做出来。",
+      p3: "保持初心：认真做好每一个作品，不靠广告赚钱。",
       otherTitle: "不方便赞助？也完全没关系",
-      other: "所有作品的全部功能都是免费的，赞助不会解锁任何东西。给项目点个 Star、推荐给朋友，或者反馈问题，同样是很大的帮助。",
+      other: "赞助完全是自愿的。推荐给朋友、反馈问题，或者在 GitHub 上点个 Star，同样是很大的帮助。",
       github: "我的 GitHub",
       footer: "感谢每一位使用和支持的朋友。"
     },
     "zh-TW": {
       title: "請我喝杯咖啡",
       heading: "請我喝杯咖啡",
-      intro: "我利用業餘時間做一些免費、開源的小工具，不放廣告、不做會員、不收集任何資料，以後也會一直免費。如果其中某個作品幫到了你，歡迎請我喝杯咖啡，這會讓我更有動力繼續做下去。",
+      intro: "我利用業餘時間做一些自己喜歡的東西，有電腦小工具，也有遊戲伺服器。如果其中某個作品幫到了你，或者讓你玩得開心，歡迎請我喝杯咖啡，這會讓我更有動力繼續做下去。",
       button: "在 Ko-fi 請我喝杯咖啡",
       note: "透過 Ko-fi 安全付款，金額隨意，不需要註冊帳號。",
       projectsTitle: "我的作品",
       whyTitle: "你的支持會用在哪裡",
-      p1: "維護現有作品：跟進系統和環境的變化，修正問題，確保安全可靠。",
-      p2: "做新的作品：把大家真正需要的東西做出來。",
-      p3: "堅持原則：所有作品都免費，不加廣告，不收集資料。",
+      p1: "維持運作：修正問題、更新維護，以及支付伺服器等日常開銷。",
+      p2: "做新的作品：把大家真正需要、真正喜歡的東西做出來。",
+      p3: "保持初心：認真做好每一個作品，不靠廣告賺錢。",
       otherTitle: "不方便贊助？也完全沒關係",
-      other: "所有作品的全部功能都是免費的，贊助不會解鎖任何東西。給專案點個 Star、推薦給朋友，或者回報問題，同樣是很大的幫助。",
+      other: "贊助完全是自願的。推薦給朋友、回報問題，或者在 GitHub 上點個 Star，同樣是很大的幫助。",
       github: "我的 GitHub",
       footer: "感謝每一位使用和支持的朋友。"
     },
     "ja": {
       title: "コーヒーをおごる",
       heading: "コーヒーをおごってください",
-      intro: "空いた時間に、無料でオープンソースの小さなツールを作っています。広告も有料プランもなく、データを集めることもありません。これからもずっと無料です。どれかが役に立ったら、コーヒーを一杯おごっていただけるとうれしいです。続けていく大きな励みになります。",
+      intro: "空いた時間に、パソコン用の小さなツールやゲームサーバーなど、自分が作りたいものを作っています。どれかが役に立ったり、楽しんでもらえたりしたら、コーヒーを一杯おごっていただけるとうれしいです。続けていく大きな励みになります。",
       button: "Ko-fi でコーヒーをおごる",
       note: "お支払いは Ko-fi で安全に行われます。金額は自由で、アカウント登録は不要です。",
       projectsTitle: "作ったもの",
       whyTitle: "いただいた支援の使い道",
-      p1: "今あるツールのメンテナンス：OS や環境の変化に追従し、不具合を直し、安全に保ちます。",
-      p2: "新しいツール：皆さんが本当に必要としているものを作ります。",
-      p3: "方針は変えません：すべて無料、広告なし、データ収集なし。",
+      p1: "運営と維持：不具合の修正やアップデート、サーバー代などの費用にあてます。",
+      p2: "新しい作品：皆さんが本当に必要としているもの、楽しめるものを作ります。",
+      p3: "初心を大切に：一つひとつ丁寧に作り、広告で稼ぐことはしません。",
       otherTitle: "支援が難しくても大丈夫です",
-      other: "すべてのツールのすべての機能は無料で、支援しても何かが解放されるわけではありません。Star を付けたり、友だちに紹介したり、不具合を報告したりするのも大きな助けになります。",
+      other: "支援はあくまで任意です。友だちに紹介したり、不具合を報告したり、GitHub で Star を付けたりするのも大きな助けになります。",
       github: "GitHub",
       footer: "使ってくださる皆さん、応援してくださる皆さんに感謝します。"
     },
     "en": {
       title: "Buy me a coffee",
       heading: "Buy me a coffee",
-      intro: "I make small, free, open-source tools in my spare time. No ads, no premium tiers, no data collection, and they will stay free. If one of them helped you, you're welcome to buy me a coffee. It really keeps me motivated to keep going.",
+      intro: "In my spare time, I make things I care about, from small PC tools to game servers. If something I made has helped you or given you a good time, consider buying me a coffee. It means a lot and keeps me going.",
       button: "Buy me a coffee on Ko-fi",
-      note: "Payments are handled securely by Ko-fi. Any amount, no account needed.",
+      note: "Payments are handled securely through Ko-fi. Any amount helps, and no account is needed.",
       projectsTitle: "Things I've made",
       whyTitle: "Where your support goes",
-      p1: "Maintaining what's already out there: keeping up with system changes, fixing bugs, and keeping everything safe.",
-      p2: "Making new things that people actually need.",
-      p3: "Staying true to the principles: everything free, no ads, no data collection.",
-      otherTitle: "Can't donate? That's completely fine",
-      other: "Every feature of every project is free, and donating doesn't unlock anything. Starring a project, telling a friend, or reporting a bug helps just as much.",
+      p1: "Keeping things running: fixing bugs, shipping updates, and covering costs like server hosting.",
+      p2: "Making new things that people actually need and enjoy.",
+      p3: "Doing it right: putting real care into everything I make, and never relying on ads.",
+      otherTitle: "Can't donate? No worries",
+      other: "Donating is entirely optional. Telling a friend, reporting a bug, or starring a project on GitHub helps just as much.",
       github: "My GitHub",
-      footer: "Thank you to everyone who uses and supports my work."
+      footer: "Thanks to everyone who uses and supports my work."
     }
   };
 
@@ -252,6 +267,13 @@
       if (p.url) { el.href = p.url; el.target = "_blank"; el.rel = "noopener"; }
       const img = document.createElement("img");
       img.src = p.logo; img.alt = "";
+      // logo 文件还没放进来时，用名字的首字母代替
+      img.onerror = () => {
+        const tile = document.createElement("i");
+        tile.className = "tile";
+        tile.textContent = (p.name.en || "?")[0];
+        img.replaceWith(tile);
+      };
       const text = document.createElement("div");
       const b = document.createElement("b"); b.textContent = p.name[lang] || p.name.en;
       const s = document.createElement("span"); s.textContent = p.desc[lang] || p.desc.en;
